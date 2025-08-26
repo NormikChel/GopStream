@@ -1,1 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-text {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff00ff,
+        0 0 30px #ff00ff,
+        0 0 40px #ff00ff;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+    color: #a5a5a5;
+}
+
+#intro {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 0, 255, 0.2);
+}
+
+#intro h2 {
+    color: #ff00ff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.description p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+#auth, #profile {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+#auth h2, #profile h2 {
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.neon-button {
+    padding: 12px 25px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid;
+}
+
+.neon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.7),
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.add-link {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.add-link input {
+    flex-grow: 1;
+}
+
+#linksList {
+    list-style: none;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.link-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.link-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.youtube { color: #FF0000; }
+.vk { color: #4A76A8; }
+.spotify { color: #1DB954; }
+.yandex { color: #FFCC00; }
+.default { color: #ff00ff; }
+
+.link-url {
+    flex-grow: 1;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.link-url:hover {
+    color: #00ffff;
+    text-decoration: underline;
+}
+
+.delete-btn {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff3366;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a5a5a5;
+    font-family: 'Roboto Mono', monospace;
+}
+
+@media (max-width: 600px) {
+    .neon-text {
+        font-size: 2.5rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .add-link {
+        flex-direction: column;
+    }
+}
