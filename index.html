@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GopStream</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>GopStream</h1>
-    <div id="auth">
-        <input type="text" id="username" placeholder="Логин">
-        <input type="password" id="password" placeholder="Пароль">
-        <button onclick="register()">Зарегаться</button>
-        <button onclick="login()">Войти</button>
-    </div>
-    <div id="profile" style="display:none;">
-        <h2>Твои ссылки, брателло!</h2>
-        <input type="text" id="linkInput" placeholder="Твоя охуенная ссылка">
-        <button onclick="addLink()">Добавить</button>
-        <ul id="linksList"></ul>
+    <div class="container">
+        <header>
+            <h1 class="neon-text" data-text="GopStream">GopStream</h1>
+            <p class="tagline">Твой личный агрегатор охуенных ссылок</p>
+        </header>
+
+        <main>
+            <section id="intro">
+                <h2>Чо это за хуйня?</h2>
+                <div class="description">
+                    <p>GopStream — это убер-удобная хуйня, где ты можешь хранить все свои охуенные ссылки на музыку, видосы и прочую дичь в одном месте. Больше не нужно искать свои закладки по всей жопе интернета.</p>
+                    <p>Просто зарегистрируйся, добавляй ссылки с YouTube, VK, Spotify, Яндекс.Музыки и других площадок, и они автоматически подхватят свои иконки. Красота, да?</p>
+                </div>
+            </section>
+
+            <div id="auth">
+                <h2>Давай замутим аккаунт, брателло!</h2>
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Твой кринжовый логин">
+                    <input type="password" id="password" placeholder="Твой секретный пароль">
+                </div>
+                <div class="button-group">
+                    <button class="neon-button" onclick="register()"><i class="fas fa-user-plus"></i> Зарегаться</button>
+                    <button class="neon-button" onclick="login()"><i class="fas fa-sign-in-alt"></i> Войти</button>
+                </div>
+            </div>
+
+            <div id="profile" style="display:none;">
+                <h2>Твои ссылки, брателло!</h2>
+                <div class="add-link">
+                    <input type="text" id="linkInput" placeholder="Впиши свою охуенную ссылюку">
+                    <button class="neon-button" onclick="addLink()"><i class="fas fa-plus"></i> Добавить</button>
+                </div>
+                <ul id="linksList"></ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>GopStream &copy; 2023 | Сделано с любовью и несколькими литрами энергетика</p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
