@@ -59,7 +59,8 @@ app.post('/login', (req, res) => {
   });
 });
 
-// Запускаем сервер
-app.listen(port, () => {
-  console.log(`GopStream слушает порт ${port}, брателло! АУЕ!`);
+// Слушаем порт, который даст Heroku, либо 3000, если запускаем локально
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`GopStream слушает порт ${PORT}, брателло! АУЕ!`);
 });
